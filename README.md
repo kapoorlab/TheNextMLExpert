@@ -10,6 +10,6 @@ Task 1) Segmentation of Nuclei
 
 4) Using seeds from stardist perfrom a marker controlled watershed using UNET mask, for week edges use smartcorrection functionality of the smart seeds algorithm.
 
-5) Apply the segmented model slice by slice stitching the slices using RelabelZ function written by me and [Volker H]https://github.com/VolkerH.
+5) Apply the segmented model slice by slice stitching the slices using RelabelZ function written by me and [Volker H](https://github.com/VolkerH).
 
 
