@@ -8,6 +8,8 @@ Task 1) Segmentation of Nuclei
 
 3) Denoise the Raw images using CARE model and train UNET model for Denoised Raw to Binary Mask and Stardist model for Denoised Raw to label(Binary Mask) using this notebook:
 
-4) Apply the segmented model slice by slice stitching the slices using RelabelZ function written by me and Volker H.
+4) Using seeds from stardist perfrom a marker controlled watershed using UNET mask, for week edges use smartcorrection functionality of the smart seeds algorithm.
+
+5) Apply the segmented model slice by slice stitching the slices using RelabelZ function written by me and [Volker H]https://github.com/VolkerH.
 
 
