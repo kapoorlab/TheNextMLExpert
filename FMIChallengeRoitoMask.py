@@ -175,6 +175,4 @@ if __name__ in ['__builtin__','__main__']:
                        
                                do_recursive
                               )
-    for image in images:
-        # Call the toString() method of each ImagePlus object.
-        print(image)
+
