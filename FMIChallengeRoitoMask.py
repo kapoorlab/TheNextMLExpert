@@ -135,6 +135,10 @@ def batch_open_images(pathImage, pathRoi, pathMask, file_typeImage=None,  name_f
 		         rm = RoiManager.getInstance()
 		         if (rm==None):
 		            rm = RoiManager()
+		         try:   
+		           rm.runCommand('Delete')   
+		         except:
+		           pass  
 		         rm.runCommand("Open", RoiName)
 		         
 		         impMask = IJ.createImage("Mask", "8-bit grayscale-mode", imp.getWidth(), imp.getHeight(), imp.getNChannels(), imp.getNSlices(), imp.getNFrames())
