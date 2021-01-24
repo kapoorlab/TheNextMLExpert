@@ -24,6 +24,7 @@ the [training notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/N
 Task 2) Spot Segmentation
 Method A:
 1) I made an MSER based interactive Fiji plugin to segment spots in 3D. It requires installation of two jars [MSERPlugin](https://github.com/kapoorlab/TheNextMLExpert/blob/main/SpotSegmentationMSER/MSER_-1.0.0.jar) and [MasterPanels](https://github.com/kapoorlab/TheNextMLExpert/blob/main/SpotSegmentationMSER/MasterPanels-1.0.0.jar)
+If this installation does not work try downloading the jars from here: [Alternate jars](https://drive.google.com/drive/folders/1Ge1p8x2ZNRy3GxS0QlrYis9i7u7suZOV?usp=sharing)
 2) After installing these two jars in Fiji, I used these [parameters](https://github.com/kapoorlab/TheNextMLExpert/blob/main/Screenshots/MSERPanel.png) to make the component tree.
 
 Method B:
