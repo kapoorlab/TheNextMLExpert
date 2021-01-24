@@ -9,9 +9,9 @@ Task 1) Segmentation of Nuclei
 3) Denoise the Raw images using [CARE model](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/ZYXDenoising.ipynb) 
 use the denoised and raw images to train UNET and Stardist model, [training notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/TrainModel.ipynb)
 
-4) Using seeds from stardist perfrom a marker controlled watershed using UNET mask, [prediction notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/SmartSeedsPrediction.ipynb)
+4) Using seeds from stardist perfrom a marker controlled watershed using UNET mask, slice by slice 2D result [prediction notebook](https://nbviewer.jupyter.org/github/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/SmartSeedsPrediction.ipynb)
 
-5) Stitch the nearby cells to create a 3D object in the same notebook.
+5) Stitch the nearby cells to create a 3D object in the same notebook, using a pre set distance threshold.
 
  Tif file of Segmentation Results: [UNET, StarDist and SmartSeeds](https://drive.google.com/drive/folders/1I4osUmRQqqEUjJYRsA4ujwVrBGxWmKEz?usp=sharing)
 
