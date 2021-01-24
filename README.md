@@ -6,7 +6,8 @@ Task 1) Segmentation of Nuclei
 
 2) Use the [Jython code](https://github.com/kapoorlab/TheNextMLExpert/blob/main/CreateTrainingData/FMIChallengeRoitoMask.py) to convert Rois to binary mask, then manually make cuts to seperate the overlapping nuclei.
 
-3) Denoise the Raw images using [CARE model](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/ZYXDenoising.ipynb) and train UNET model for Denoised Raw to Binary Mask and Stardist model for Denoised Raw to label(Binary Mask), [training notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/TrainModel.ipynb)
+3) Denoise the Raw images using [CARE model](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/ZYXDenoising.ipynb) 
+use the denoised and raw images to train UNET and Stardist model, [training notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/TrainModel.ipynb)
 
 4) Using seeds from stardist perfrom a marker controlled watershed using UNET mask, [prediction notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/SmartSeedsPrediction.ipynb)
 
