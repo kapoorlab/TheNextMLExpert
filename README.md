@@ -6,14 +6,15 @@ Task 1) Segmentation of Nuclei
 
 2) Use the [Jython code](https://github.com/kapoorlab/TheNextMLExpert/blob/main/CreateTrainingData/FMIChallengeRoitoMask.py) to convert Rois to binary mask, then manually make cuts to seperate the overlapping nuclei.
 
-3) Denoise the Raw images using [CARE model](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/ZYXDenoising.ipynb) and train UNET model for Denoised Raw to Binary Mask and Stardist model for Denoised Raw to label(Binary Mask) using this notebook:
+3) Denoise the Raw images using [CARE model](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/ZYXDenoising.ipynb) and train UNET model for Denoised Raw to Binary Mask and Stardist model for Denoised Raw to label(Binary Mask), [training notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/TrainModel.ipynb)
 
-4) Using seeds from stardist perfrom a marker controlled watershed using UNET mask, for week edges use smartcorrection functionality of the smart seeds algorithm.
+4) Using seeds from stardist perfrom a marker controlled watershed using UNET mask, [prediction notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/SmartSeedsPrediction.ipynb)
 
-5) Apply the segmented model slice by slice stitching the slices using RelabelZ function written by me and [Volker H](https://github.com/VolkerH).
+5) Stitch the nearby cells to create a 3D object in the same notebook.
 
 Segmentation Results: [UNET, StarDist and SmartSeeds](https://drive.google.com/drive/folders/1I4osUmRQqqEUjJYRsA4ujwVrBGxWmKEz?usp=sharing)
 
+6) [Notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/NapariCorrectionTool.ipynb) for comparing nuclei segmentation between StarDist and SmartSeeds along with Spot Segmentation result. The idea is to correct the mistakes in smartseeds segmentation to train a real 3D UNET and Stardist 3D model.
 [Trained Models](https://drive.google.com/drive/folders/1G9oAPFxHTGedwWSoXgzAX3fd6WzXIspA?usp=sharing)
 
 Task 2) Spot Segmentation
