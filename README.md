@@ -56,16 +56,16 @@ Using the new data do augmentations, denoising to create mode data and train a r
 Q) Given the overall goal of a per-cell motion correction, discuss alternative approaches
 
 A) Tracking is done inside the integer mask (nuclei), using the tracks of the cell we could make a front end
-Python based solution to do the per-ell motion correction using the nuclei mask information.
+Python based solution to do the per-cell motion correction using the nuclei mask information.
 
 Q) Discuss strategies for spot detection
 
 A) Using MSER interactive plugin to obtain integer labelled 3D spot segmentations or using Ilastik to generate probability maps
-of the spot class, which can then be converted to labelled 3D spot segmentations using the provided notebooks
+of the spot class, which can then be converted to labelled 3D spot segmentations using the provided [notebooks](https://nbviewer.jupyter.org/github/kapoorlab/TheNextMLExpert/blob/main/SpotSegmentation/ILASTIK-MSERSegmentationSpots.ipynb)
 
 Q) Assume that your workflow has spiked a lot of interest across different users/labs. Discuss how you could
   scale-up serving the workflow and identify potential challenges
 
-A) Make the jars available on Fiji update site and release the python tools using pip. For different final specific lab related
+A) Make the [jars](http://biii.eu/simple-mser-based-segmentation-tool-spot-detection-234d) available on Fiji update site and release the python tools using pip. For different final specific lab related
 questions, create customised front end Jupiter notebooks to extract the information of interest, which is the only degenerate 
 Step in otherwise universal workflow 
