@@ -36,3 +36,34 @@ Tracking:
 
 After obtaining the segmentation results for spots and the nuclei, the goal is to track the spots inside each nuclei. However since complete timelapse was not provided in the assingment, I create a fake time lapse of image name ending in t38, 101, 106 and 141 to illustrate a proof of concept of tracking.
 1) Make the fake [time lapse images](https://drive.google.com/drive/folders/1lvlZsG415gw6URIQJoIXtPaI8kTADnHZ?usp=sharing) of Raw, Spot segmentation and nuclei segmentation (masks) and run this notebook to convert the image data into [csv](https://github.com/kapoorlab/TheNextMLExpert/blob/main/Tracking/PythonTools/BTrackMateLocalization.ipynb) This csv makes the attributes required by BTrackmate to track cells inside a region. This csv file it creates can also be found in the same link folder. 
+
+Challenge Answeres:
+
+## Specific tasks
+
+Q) Create an automated cell segmentation given the provided data and ground truth annotations
+Q) Suggest ways to generate more ground truth, possibly in a semi-automated way
+Q) Analyze the quality of your segmentation method and discuss possibilities to improve the result
+
+A) Using 2D annotations train smart seeds required models (depth = 5, start filter = 48), using the 
+Stitched integer labels, do some manual correction using the provided Napari correction notebook
+to generate more ground truth data .
+Using the new data do augmentations, demonising to create mode data and train a real 3D model
+
+
+Q) Given the overall goal of a per-cell motion correction, discuss alternative approaches
+
+A) Tracking is done inside the integer mask (nuclei), using the tracks of the cell we could make a front end
+Python based solution to do the per-ell motion correction using the nuclei mask information.
+
+Q) Discuss strategies for spot detection
+
+A) Using MSER interactive plugin to obtain integer labelled 3D spot segmentations or using Ilastik to generate probability maps
+of the spot class, which can then be converted to labelled 3D spot segmentations using the provided notebooks
+
+Q) Assume that your workflow has spiked a lot of interest across different users/labs. Discuss how you could
+  scale-up serving the workflow and identify potential challenges
+
+A) Make the jars available on Fiji update site and release the python tools using pip. For different final specific lab related
+questions, create customised front end Jupiter notebooks to extract the information of interest, which is the only degenerate 
+Step in otherwise universal workflow 
