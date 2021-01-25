@@ -15,7 +15,7 @@ use the denoised and raw images to train UNET and Stardist model, [training note
 
  Tif file of Segmentation Results: [UNET, StarDist and SmartSeeds](https://drive.google.com/drive/folders/1I4osUmRQqqEUjJYRsA4ujwVrBGxWmKEz?usp=sharing)
 
-6) [Notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/NapariCorrectionTool.ipynb) for comparing nuclei segmentation between StarDist and SmartSeeds along with Spot Segmentation result. The idea is to correct the mistakes in smartseeds segmentation to train a real 3D UNET and Stardist 3D model.
+6) [Notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/NucleiSegmentation/NucleiSegmentations.ipynb) for comparing nuclei segmentation between StarDist and SmartSeeds along with Spot Segmentation result. The idea is to correct the mistakes in smartseeds segmentation to train a real 3D UNET and Stardist 3D model.
 
 
 7) The h5 files of [Trained Models](https://drive.google.com/drive/folders/1G9oAPFxHTGedwWSoXgzAX3fd6WzXIspA?usp=sharing), the training parameters are specified in
@@ -23,10 +23,12 @@ the [training notebook](https://github.com/kapoorlab/TheNextMLExpert/blob/main/N
 
 Task 2) Spot Segmentation
 Method A:
-1) I made an MSER based interactive Fiji plugin to segment spots in 3D. It requires installation of two jars [MSERPlugin](https://github.com/kapoorlab/TheNextMLExpert/blob/main/SpotSegmentationMSER/MSER_-1.0.0.jar) and [MasterPanels](https://github.com/kapoorlab/TheNextMLExpert/blob/main/SpotSegmentationMSER/MasterPanels-1.0.0.jar)
+1) I made an MSER based interactive Fiji plugin to segment spots in 3D. It requires installation of two jars [MSERPlugin and MasterPanels](https://github.com/kapoorlab/TheNextMLExpert/tree/main/MSER-FijiJars) 
 If this installation does not work try downloading the jars from here: [Alternate jars](https://drive.google.com/drive/folders/1Ge1p8x2ZNRy3GxS0QlrYis9i7u7suZOV?usp=sharing)
 2) After installing these two jars in Fiji, I used these [parameters](https://github.com/kapoorlab/TheNextMLExpert/blob/main/Screenshots/MSERPanel.png) to make the component tree.
 
 Method B:
-1) I trained a pixel classifier using Ilastik to obtain 3D labelled segmentation image of the spots.
+1) I trained a pixel classifier using Ilastik to obtain two channel image contaninng class probabilities for spots and background.
+2) Using a probability and size thereshold I converted the first channel (spot probability) into binary image and then to label image.
+3) Then using this [notebook](https://nbviewer.jupyter.org/github/kapoorlab/TheNextMLExpert/blob/main/SpotSegmentation/ILASTIK-MSERSegmentationSpots.ipynb) I compare the two segmentations and the results are comparable with Ilastik pixel classification producing slightly better results than MSER, with more annotations of the classes the pixel calssification workflow can be improved further to get even better spot probabilities.
 
