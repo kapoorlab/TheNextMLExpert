@@ -50,7 +50,7 @@ Q) Analyze the quality of your segmentation method and discuss possibilities to 
 A) Using 2D annotations train smart seeds required models (depth = 5, start filter = 48), using the 
 Stitched integer labels, do some manual correction using the provided Napari correction notebook
 to generate more ground truth data .
-Using the new data do augmentations, demonising to create mode data and train a real 3D model
+Using the new data do augmentations, denoising to create mode data and train a real 3D model
 
 
 Q) Given the overall goal of a per-cell motion correction, discuss alternative approaches
