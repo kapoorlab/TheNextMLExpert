@@ -42,7 +42,9 @@ Challenge Answeres:
 ## Specific tasks
 
 Q) Create an automated cell segmentation given the provided data and ground truth annotations
+
 Q) Suggest ways to generate more ground truth, possibly in a semi-automated way
+
 Q) Analyze the quality of your segmentation method and discuss possibilities to improve the result
 
 A) Using 2D annotations train smart seeds required models (depth = 5, start filter = 48), using the 
