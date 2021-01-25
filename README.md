@@ -33,5 +33,6 @@ Method B:
 3) Then using this [notebook](https://nbviewer.jupyter.org/github/kapoorlab/TheNextMLExpert/blob/main/SpotSegmentation/ILASTIK-MSERSegmentationSpots.ipynb) I compare the two segmentations and the results are comparable with Ilastik pixel classification producing slightly better results than MSER, with more annotations of the classes the pixel calssification workflow can be improved further to get even better spot probabilities.
 
 Tracking: 
+
 After obtaining the segmentation results for spots and the nuclei, the goal is to track the spots inside each nuclei. However since complete timelapse was not provided in the assingment, I create a fake time lapse of image name ending in t38, 101, 106 and 141 to illustrate a proof of concept of tracking.
 1) Make the fake [time lapse images](https://drive.google.com/drive/folders/1lvlZsG415gw6URIQJoIXtPaI8kTADnHZ?usp=sharing) of Raw, Spot segmentation and nuclei segmentation (masks) and run this notebook to convert the image data into [csv](https://github.com/kapoorlab/TheNextMLExpert/blob/main/Tracking/PythonTools/BTrackMateLocalization.ipynb) This csv makes the attributes required by BTrackmate to track cells inside a region. This csv file it creates can also be found in the same link folder. 
